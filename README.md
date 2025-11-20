@@ -1,2 +1,2 @@
-# metacrisp-website
-Website for the MetaCRISP Workshop
+# MetaCRISP Workshop
+More information coming soon..
