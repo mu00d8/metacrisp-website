@@ -6,13 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
         /* Default background image for larger screens */
+
         @media all and (min-width: 767px) {
-            .bg-image {background-image:url('bg-abstract-1.jpg'); background-position: center; background-size: cover; min-height: 300px; display: flex; justify-content: center; align-items: center;}
+            .bg-image {
+                background-image: url('bg-blue-orange.jpg');
+                background-position: center;
+                background-size: cover;     /* changed */
+                background-repeat: no-repeat;
+                
+                min-height: 400px; 
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
         /* Smaller screens (phones) */
         @media all and (max-width: 767px) {
             .bg-image {background-image:url('bg-abstract-1.jpg'); background-position: center; background-size: cover; min-height: 500px; display: flex; justify-content: center; align-items: center;}
         }
+
+        :root {
+            --mc-bg-dark:   #050b18;  /* deep navy */
+            --mc-bg-soft:   #0d1726;  /* softer navy */
+            --mc-primary:   #ff8a3d;  /* glowing orange */
+            --mc-primary-soft: #ffb26b;
+            --mc-accent:    #4dd0ff;  /* blue/cyan accent dots */
+            --mc-text:      #f9fafb;  /* near-white text */
+            --mc-muted:     #9ca3af;  /* muted gray text */
+        }
+
+        .mc-navbar {
+            background: linear-gradient(90deg, var(--mc-bg-dark), #0d2238);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .mc-navbar .navbar-brand {
+            color: var(--mc-text) !important;
+            font-weight: 600;
+        }
+
+        .mc-navbar .nav-link {
+            color: var(--mc-muted) !important;
+        }
+
+        .mc-navbar .nav-link.active,
+        .mc-navbar .nav-link:hover {
+            color: var(--mc-primary) !important;
+        }
+
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -37,9 +79,9 @@
             </div>
         </div>
         
-        <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #f7c3c7;">
+        <nav class="navbar navbar-expand-sm navbar-dark mc-navbar">
             <div class="container">
-                <a class="navbar-brand" href="index.html">MetaCRiSP 2026</a>
+              <a class="navbar-brand" href="index.html">MetaCRiSP 2026</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -77,13 +119,22 @@
             });
         </script>
         <div class="container mt-4">
-            <p>The MetaCRiSP Workshop aims to create a dedicated venue for meta-science and critical reflections on the research practices and evaluation processes that shape our field. To that end, this workshop invites the security and privacy community to take a reflective pause:</p>
-            <p><i>How do we conduct, evaluate, and sustain our own research?</i></p>
-            <p>It is focusing on our very practices of conducting research as well as our procedures of reviewing and accepting research works.</p>
-            <blockquote class="text-center" 
+            <p>The MetaCRiSP Workshop aims to create a dedicated venue for meta-science and critical reflections on the research practices and evaluation processes that shape our field. 
+            It is focusing on our very practices of conducting research as well as our procedures of reviewing and accepting research works.
+            To that end, this workshop invites the security and privacy community to take a reflective pause:</p>
+            
+    
+            <p style="text-align: center; font-size:1.5rem; color:#7a003c;"><i>How do we conduct, evaluate, and sustain our own research?</i></p>
+           
+            
+
+<p>Our peer-review practices are rapidly evolving: shifting from single-cycle submissions to rolling review models with major/minor revisions, introducing meta-reviews for reviewer accountability, and requesting prior-review histories for author accountability – but they remain underexplored from a scientific perspective. At the same time, researchers are slowly beginning to systematically analyze and critique the research methods, metrics, and evaluation. These works, albeit still limited in number, highlight an emerging consensus: Critical reflection on how we conduct security research is essential to achieving validity, fairness, and long-term scientific soundness. </p>
+<p>Together, the lack of introspective meta-research and the evidenced changes within our security peer review processes form the twin foundations of MetaCRiSP Workshop. </p>
+
+<blockquote class="text-center",
                         style="
                             color:#7a003c; 
-                            font-size:1rem; 
+                            font-size:1.2rem; 
                             font-style:italic; 
                             padding:20px 40px; 
                             max-width:700px; 
@@ -91,10 +142,9 @@
                         ">
                 <p>Meta-research—research about research—allows us, as a community, to examine trends in our research and make informed decisions regarding the course of our future research activities.</p>
                 <footer class="text-end" style="font-size:0.9rem; color:#5a002d;">– Baset, A., & Denning, T. (2019)</footer>
+                <!-- <footer class="mc-quote-footer">– Baset, A., &amp; Denning, T. (2019)</footer> -->
             </blockquote>
 
-<p>Our peer-review practices are rapidly evolving: shifting from single-cycle submissions to rolling review models with major/minor revisions, introducing meta-reviews for reviewer accountability, and requesting prior-review histories for author accountability – but they remain underexplored from a scientific perspective. At the same time, researchers are slowly beginning to systematically analyze and critique the research methods, metrics, and evaluation. These works, albeit still limited in number, highlight an emerging consensus: Critical reflection on how we conduct security research is essential to achieving validity, fairness, and long-term scientific soundness. </p>
-<p>Together, the lack of introspective meta-research and the evidenced changes within our security peer review processes form the twin foundations of MetaCRiSP Workshop. </p>
 <p>We welcome participation from researchers, reviewers, program committee members, artifact and ethics evaluators, and practitioners across academia, industry, and government. </p>
 <p>The workshop's outcome will be the MetaCRiSP Challenges 2026 report that documents open problems, key takeaways, and a community call-to-action discussed throughout the entire workshop likely with the proceedings.</p>
             
