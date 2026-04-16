@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MetaCRiSP 2026</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        /* Default background image for larger screens */
+
+        @media all and (min-width: 767px) {
+            .bg-image {
+                background-image: url('assets/bg-blue-orange.jpg');
+                background-position: center;
+                background-size: cover;     /* changed */
+                background-repeat: no-repeat;
+                
+                min-height: 400px; 
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        /* Smaller screens (phones) */
+        @media all and (max-width: 767px) {
+            .bg-image {background-image:url('assets/bg-blue-orange.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; min-height: 400px; display: flex; justify-content: center; align-items: center;}
+        }
+
+        :root {
+            --mc-bg-dark:   #050b18;  /* deep navy */
+            --mc-bg-soft:   #0d1726;  /* softer navy */
+            --mc-primary:   #ff8a3d;  /* glowing orange */
+            --mc-primary-soft: #ffb26b;
+            --mc-accent:    #4dd0ff;  /* blue/cyan accent dots */
+            --mc-text:      #f9fafb;  /* near-white text */
+            --mc-muted:     #9ca3af;  /* muted gray text */
+        }
+
+        .mc-navbar {
+            background: linear-gradient(90deg, var(--mc-bg-dark), #0d2238);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .mc-navbar .navbar-brand {
+            color: var(--mc-text) !important;
+            font-weight: 600;
+        }
+
+        .mc-navbar .nav-link {
+            color: var(--mc-muted) !important;
+        }
+
+        .mc-navbar .nav-link.active,
+        .mc-navbar .nav-link:hover {
+            color: var(--mc-primary) !important;
+        }
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+ 
+    </head>
+    
+    <body>
+        
+        <br><br>
+        <div class="p-5 text-white bg-image">
+            <div style="background-color: rgba(146, 146, 146, 0.5); text-align: center;" class="p-5 rounded">
+                <h1>MetaCRiSP 2026</h1><br>
+                <h3>1st Workshop on Metascience and Critical Reflections in Security & Privacy </h3></br>
+                <h4>Co-located with the <a class="text-white" href="https://sp2026.ieee-security.org/">47th IEEE Security and Privacy (S&P) Symposium</a></h4>
+                <h4>May 21, 2026</h4>
+            </div>
+        </div>
+        
+        <nav class="navbar navbar-expand-sm navbar-dark mc-navbar fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">MetaCRiSP 2026</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#program">Program</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#cfp">Call for Papers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#committee">Organization</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script>
+            // Add JavaScript to close the collapse menu using Bootstrap animation
+            var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            var navbarToggler = document.querySelector('.navbar-toggler');
+        
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (navbarToggler.classList.contains('collapsed')) {
+                        // Menu is already closed
+                        return;
+                    }
+                    navbarToggler.click(); // Trigger click event to close the menu
+                });
+            });
+        </script>
+        
+        <div class="container mt-4">
+
+        <h1 id="program" style="scroll-margin-top: 70px">Program</h1>
+        <div class="card">
+            <div class="card-header text-white" style="background-color: #0d2238;"><h4>Thursday, May 25</h4></div>
+                <ul class="list-group list-group-flush bg-light">
+                    <li class="list-group-item bg-light">
+                        <div class="row">
+                            <div class="col-2">8:50am - 9:00am</div> 
+                            <div class="col-8">Opening Remarks</div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-flush bg-light">
+                    <li class="list-group-item bg-light">
+                        <div class="row">
+                            <div class="col-2">9:00am - 10:00am</div> 
+                            <div class="col-8"><strong>Keynote: Can We do Better? Security, Science and the Elusive Science of Security </strong><br><a href="https://cormac.herley.org">Cormac Herley (Microsoft Research)</a></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <!-- <strong>Can We do Better? Security, Science and the Elusive Science of Security</strong> -->
+                            <p>
+
+<i>Abstract.</i> The success and scale of the modern tech industry wouldn't be possible if computers didn't (mostly) operate securely and reliably. Computer Security deserves considerable credit for this success: in spite of the enormous energy and ingenuity of attackers, the carelessness of users, and a never-ending stream of bugs and zero-days things mostly work out.
+
+And yet, it's hard not to wonder whether we might do better. Not only do we lack the structure of the hard Sciences, but also many of the softer ones. We seem to revisit certain questions over and over without decision or progress. Security looks like a mess even compared to other CS disciplines such as Machine Learning.  We argue that this is not inevitable, has nothing to do with the newness of the field, or factors unique to security. While we are unlikely to end up with anything resembling Physics, we argue that improvement is possible; there are well-established practices from other discplines that we can take to make the field less unscientific. Doing so involves exiting some comfort zones, recognizing that Science offers no path to certainty, and letting go of the idea that security is somehow exceptional or exempted from rules that apply everywhere else.
+
+<br><br>
+
+<i>Bio.</i> Cormac Herley is at Microsoft Research. His main current interests are statistics, and machine learning for combatting fraud and abuse. He has published widely in the areas of authentication, Usable Security, ML for security, the Economics of Computer Security, and Philosophy of Security. He is inventor of 70 or so US patents and regularly ships technologies protecting hundreds of millions of users. His recommendations on passwords (eg, no composition rules or forced 90-day rotation) were adopted by NIST and much of the industry. He received the PhD degree from Columbia University, the MSEE from Georgia Tech, and the BE(Elect) from the National University of Ireland.</p>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <ul class="list-group list-group-flush bg-light">
+                    <li class="list-group-item bg-light">
+                        <div class="row">
+                            <div class="col-2">10:00am - 10:30am</div> 
+                            <div class="col-8">Break</div>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <ul class="list-group list-group-flush bg-light">
+                    <li class="list-group-item bg-light">
+                        <div class="row">
+                            <div class="col-2">10:30am - 12:00pm</div> 
+                            <div class="col-8">Session: Research Practices</div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>On the Mismatch of Disclosure Practices in Security and Privacy Research</strong>
+                            <p>Simon Koch (University of Innsbruck), Jannik Hartung (Technische Universität Braunschweig), Rainer Böhme (University of Innsbruck), David Klein (Max Planck Institute for Security and Privacy)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>On the (Non-)Precision of Psychological Measures in Security and Privacy Research: Reliability Beyond Reporting Alpha</strong>
+                            <p>Nele Borgert (University of Bern), Tim Ulmann (University of Bern), Robin Merchel (Ruhr University Bochum)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>What’s in the mandatory USENIX Security 2025 ethics sections? Results from a meta-analysis</strong>
+                            <p>Rachel Gonzalez Rodriguez (Paderborn Univerisity), Harshini Sri Ramulu (Paderborn University), Yasemin Acar (Paderborn University & George Washington University)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>FAIR Enough? Assessing Open Science Practices on a Top-Tier Security & Privacy Conference</strong>
+                            <p>Tiago Heinrich (Max Planck Institute for Informatics), Sebastian Giessler (Universität Tübingen), David Klein (Max Planck Institute for Security and Privacy), Alexandra Dirksen (University of Twente)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>Evaluating LLM Reliability for Coding Adversarial Machine Learning Research Papers</strong>
+                            <p>Madhav Khanal (Rollins College), Jasser Jasser (Rollins College), Mina Basirat (University of Central Florida)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>Position Paper: Living Artifacts: Enabling Vertical Progress In Cybersecurity Research</strong>
+                            <p>Jelena Mirkovic (USC-ISI), David Balenson (USC-ISI)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>Experience Paper: Is This the Real Life? Is This Just Fantasy? Hunting for Hallucinated References in Paper Submissions</strong>
+                            <p>Gianluca Stringhini (Boston University), Jeremy Blackburn (Binghamton University)</p>
+                        </div>
+                    </li>
+                </ul>
+
+            
+                <ul class="list-group list-group-flush bg-light">
+                    <li class="list-group-item bg-light">
+                        <div class="row">
+                            <div class="col-2">12:00pm - 1:15pm</div> 
+                            <div class="col-8">Lunch</div>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <ul class="list-group list-group-flush bg-light">
+                    <li class="list-group-item bg-light">
+                        <div class="row">
+                            <div class="col-2">1:15pm - 2:30pm</div> 
+                            <div class="col-8">Session 2: Research Policies</div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>This Paper is Quite Unusual: Metascience and Structural Misalignment in the Security & Privacy Research Community</strong>
+                            <p>Henry Hosseini (Institute for Internet Security, Westphalian University of Applied Sciences; Department of Information Systems, University of Münster), Christian Böttger (Institute for Internet Security, Westphalian University of Applied Sciences), Nurullah Demir (Stanford University), Tobias Urban (Institute for Internet Security, Westphalian University of Applied Sciences)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>Inspectable AI for Science: A Research Object Approach to Generative AI Governance</strong>
+                            <p>Ruta Binkyte (CISPA Helmholtz Center for Information Security), Sharif Abuadbba (Data61, CSIRO), Chamikara Mahawaga Arachchige (Data61, CSIRO), Ming Ding (Data61, CSIRO), Natasha Fernandes (Macquarie University), Mario Fritz (CISPA Helmholtz Center for Information Security)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>Replication Crisis in Human-Centered Security Research: Are We There Yet?</strong>
+                            <p>Juliane Schmüser (CISPA Helmholtz Center for Information Security), Jan-Ulrich Holtgrave (CISPA Helmholtz Center for Information Security), Florian Schaub (University of Michigan), Sascha Fahl (CISPA Helmholtz Center for Information Security)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>From “Available” to “Reusable”: Measuring Transparency and Reproducibility of Industrial Control System Datasets under Security Artifact Evaluation Policies</strong>
+                            <p>Mohammad Einaam Alim (University of Alabama in Huntsville), Tommy Morris (University of Alabama in Huntsville)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>CyCoAnalysis: A Dataset of Cybersecurity Conference Metadata for Meta-Science and Policy Decisions</strong>
+                            <p>Marton Bognar (DistriNet, KU Leuven), Lieven Desmet (DistriNet, KU Leuven), Frank Piessens (DistriNet, KU Leuven)</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="col-12">
+                            <strong>Corrections Not Found: Post-Publication Integrity in Usable Security and Privacy</strong>
+                            <p>Nele Borgert (University of Bern), Luisa Jansen (University of Bern), Lukas Jung (University of Bern), Theresa Halbritter (University of Bern), Malte Elson (University of Bern) </p>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <ul class="list-group list-group-flush bg-light">
+                    <li class="list-group-item bg-light">
+                        <div class="row">
+                            <div class="col-2">2:30pm - 3:00pm</div> 
+                            <div class="col-8">Break</div>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <ul class="list-group list-group-flush bg-light">
+                    <li class="list-group-item bg-light">
+                        <div class="row">
+                            <div class="col-2">3:00pm - 4:00pm</div> 
+                            <div class="col-8"><strong>Panel: TBD</strong><br>Adam Doupé, Michelle Mazurek, Ben Stock</div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="list-group list-group-flush bg-light">
+                    <li class="list-group-item bg-light">
+                        <div class="row">
+                            <div class="col-2">4:00pm - 4:15pm</div> 
+                            <div class="col-8">Closing Remarks</div>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    </body>
+    </html>
