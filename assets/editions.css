@@ -1,0 +1,90 @@
+/* MetaCRiSP editions: year switcher, archive note, editions overview. See editions.js. */
+
+/* --- Year switcher: reads as part of the title, "MetaCRiSP 2027 ▾" --- */
+.mc-navbar .navbar-brand {
+    margin-right: 0.3rem;
+}
+
+.mc-edition {
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .mc-navbar .navbar-collapse {
+        margin-left: 1.25rem;
+    }
+}
+
+.mc-edition-toggle {
+    border: 0;
+    background: none;
+    padding: 0;
+    color: #f9fafb;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.mc-edition-toggle::after {
+    vertical-align: 0.2em;
+    margin-left: 0.35em;
+    opacity: 0.6;
+}
+
+.mc-edition-toggle:hover,
+.mc-edition-toggle[aria-expanded="true"] {
+    color: #ffb26b;
+}
+
+.mc-edition-menu {
+    font-size: 0.9rem;
+    min-width: 14rem;
+}
+
+.mc-edition-menu .dropdown-item {
+    display: flex;
+    gap: 0.6rem;
+    align-items: baseline;
+}
+
+.mc-edition-menu .dropdown-item.active,
+.mc-edition-menu .dropdown-item:active {
+    background: #f3f4f6;
+    color: inherit;
+}
+
+.mc-ed-year {
+    font-weight: 600;
+}
+
+.mc-ed-meta {
+    color: #6b7280;
+}
+
+/* --- Archive note on old editions --- */
+.mc-archive-note {
+    background: #f3f4f6;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+    font-size: 1rem;
+    padding: 0.9rem 0;
+}
+
+/* Gray header image on old editions */
+.mc-archived .bg-image {
+    background-color: #6b7280;
+    background-blend-mode: luminosity;
+}
+
+/* --- Editions overview on the homepage --- */
+.mc-ed-list li {
+    margin-bottom: 0.5rem;
+}
+
+.mc-ed-this {
+    color: #6b7280;
+}
+
+.mc-ed-links {
+    font-size: 0.95rem;
+}
