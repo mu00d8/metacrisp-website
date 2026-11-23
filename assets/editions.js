@@ -22,7 +22,7 @@ const MC_EDITIONS = [
         dir: "2026/",
         links: [
             ["Program & slides", "program.html#program"],
-            ["Workshop report", "metacrisp2026-report.pdf"],
+            ["Workshop report", "../reports/metacrisp2026-report.pdf"],
             ["Call for papers", "index.html#cfp"],
         ],
     },
